@@ -1,0 +1,19 @@
+.jumbotron {
+    color:white;
+}
+
+.city {
+    width:60%;
+    height:33%;
+    color:white;
+    background-color:rgb(39, 39, 85);
+}
+
+.weather-display {
+    border: solid 2px black;
+}
+
+.news-display {
+    margin-bottom:75%;
+}
+
