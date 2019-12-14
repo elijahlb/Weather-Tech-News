@@ -1,5 +1,7 @@
 .jumbotron {
     color:white;
+    height:50px;
+    font-size:75%;
 }
 
 .city {
@@ -10,10 +12,47 @@
 }
 
 .weather-display {
-    border: solid 2px black;
+    border-left: solid 2px black;
 }
 
-.news-display {
-    margin-bottom:75%;
+.city-div {
+    text-align:center;
 }
 
+.past-city-search {
+    width:auto;
+    font-weight:bold;
+    margin-bottom:10px;
+    border-style:none;
+    border-bottom:2px solid black;
+    padding-bottom:10px;
+    text-align:center;
+}
+
+#current-city {
+    font-weight:bold;
+    font-size:100%;
+}
+
+
+
+/*   UV INDEX   */
+.low-level {
+    background-color:green;
+}
+.moderate-level{
+    background-color:yellow;
+}
+
+.high-level{
+    background-color:orange;
+}
+
+.very-high-level{
+    background-color:red;
+}
+
+.extreme {
+    background-color:violet;
+}
+/*   UV INDEX   */
