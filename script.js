@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+
+
+  // -----------------TOP 3 TECH NEWS STORIES ---------
   var newsAPI = "857cd6a38a5d437881086d8056835eae";
   var newsURL = "https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=" + newsAPI
   $.ajax({
@@ -34,7 +37,6 @@ $(document).ready(function() {
       url: queryURL5,
       method: "GET"
     }).then(function(response5) {
-      console.log(response5)
       var imgURL5 = response5.weather[0].icon
       var weatherIcon5 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL5 + ".png")
       var kelvin = response5.main.temp;
@@ -58,7 +60,6 @@ $(document).ready(function() {
       url: queryURL6,
       method: "GET"
     }).then(function(response6) {
-console.log(response6)
     
     var imgURL2 = response6.list[5].weather[0].icon
         var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
@@ -165,7 +166,6 @@ console.log(response6)
 // ----------SETS SEARCH VALUE TO LOCAL STORAGE ARRAY --------
 $('.search-city').on('click', function(e){  
   e.preventDefault();
-
   var localValue = localStorage.getItem('value1');
   var textArr = localValue ? JSON.parse(localValue) : [];   
   var text = $('#city-search').val();
@@ -209,16 +209,13 @@ $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-    console.log(response)
     var imgURL = response.weather[0].icon
     var weatherIcon = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL + ".png")
     var kelvin = response.main.temp;
     var fahrenheit = (Math.floor((kelvin * 9/5) - 459.67));
     
     // ---------------DISPLAYING MOST RECENT SEARCH ITEM -----
-    
-   
-    
+
               $("#current-city").empty();
               $("#current-city").append(response.name + ": " + (moment().format('L')));
               $("#city-temp").empty();
@@ -229,7 +226,6 @@ $.ajax({
               $("#city-wind").append("Wind-Speed: " + response.wind.speed + " MPH")
               $("#weather-icon").empty();
               $("#weather-icon").append(weatherIcon);
-
 
     // ----SETUP FOR UV AJAX CALL --------
     var latitude = response.coord.lat
@@ -267,14 +263,11 @@ $.ajax({
       var cityName = response.name
       var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
       var queryURL3 = "http://api.openweathermap.org/data/2.5/forecast?appid=" + APIKey + "&q=" + cityName;
-      
-    
-      console.log(queryURL3)
+
       $.ajax({
         url: queryURL3,
         method: "GET"
       }).then(function(response3) {
-        console.log(response3)
         var imgURL2 = response3.list[0].weather[0].icon
         var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
 
@@ -386,4 +379,8 @@ $.ajax({
 
 });
 
+
+
 });
+
+

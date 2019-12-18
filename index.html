@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title>Weather & Tech News</title>
     <link rel="stylesheet" type= "text/css" href="../Weather-Dashboard/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Overpass+Mono|Share&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
             <div class = "col-md-3">
                 <!----SEARCH BAR---->
                 <div class="input-group mb-4 search">
-                    <input type="text" id="city-search" class="form-control" placeholder="Enter a city" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <input type="text" id="city-search" class="form-control city-search" placeholder="Enter a city" aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                             <button class="btn btn-outline-secondary search-city" type="button"><i class="fas fa-search-location"></i></button>
                     </div>
@@ -33,32 +33,19 @@
                 <div class="col-md-2 text-center">
                         <h5>Previous Searches:</h5>
                         <hr>
-                        <span id="past-city4" class="past-city-search" aria-label="Past city search"></span>
-                        <span id="past-city3" class="past-city-search" aria-label="Past city search"></span>
-                        <span id="past-city2" class="past-city-search" aria-label="Past city search"></span>
-                        <span id="past-city1" class="past-city-search" aria-label="Past city search"></span>
-                        <span id="past-city0" class="past-city-search" aria-label="Past city search"></span>
+                        <button id="past-city4" class="past-city-search search-city" aria-label="Past city search"></button>
+                        <button id="past-city3" class="past-city-search search-city" aria-label="Past city search"></button>
+                        <button id="past-city2" class="past-city-search search-city" aria-label="Past city search"></button>
+                        <button id="past-city1" class="past-city-search search-city" aria-label="Past city search"></button>
+                        <button id="past-city0" class="past-city-search search-city" aria-label="Past city search"></button>
                         
                 </div>
                
                 <!-------->
             </div>
-
-            <div class="card col-md-6">
-                <div class="card-header">
-                    Top Stories in Tech
-                </div>
-                    <div class="card-body">
-                     <a class="news-articles1 anchor1"></a><br>
-                     <hr>
-                    <a class="news-articles2 anchor2"></a><br>
-                    <hr>
-                    <a class="news-articles3 anchor3"></a><br>
-                    <hr>
-                    </div>
-            </div>
-            <div class="col-md-3 card" >
-                <div class="card-header text-center">Current Weather</div>
+            
+            <div class="card current-weather" >
+                <div class="card-header text-center other-header">Current Weather</div>
                     <div id="weather-icon" class="city-div"></div>
                     <div id="current-city" class="city-div"></div>
                     <div id="city-temp" class="city-div"></div>
@@ -66,9 +53,23 @@
                     <div id="city-wind" class="city-div"></div>
                     <div id="city-uv" class="city-div"></div>
                 </div> 
-        </div>
 
-        <div class="row five-day">
+                <div class="card tech-news">
+                        <div class="card-header other-header text-center">
+                            Top Stories in Tech
+                        </div>
+                            <div class="card-body text-center">
+                             <a class="news-articles1 anchor1"></a><br>
+                             <hr>
+                            <a class="news-articles2 anchor2"></a><br>
+                            <hr>
+                            <a class="news-articles3 anchor3"></a><br>
+                            <hr>
+                            </div>
+                        </div>
+        </div>
+        <div class="five-day">
+        <div class="row">
             <div class="card-header text-center">5 Day Forecast <br> 
                 <i class="far fa-calendar-alt" id="calendar"></i></div>
         <div class="card" >
@@ -112,12 +113,15 @@
             <div id="city-uv5" class="city-div"></div>
         </div>
         </div>
+    </div>
 
 
         
     </div>
 
 
+
+    
 
         <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -126,6 +130,7 @@
         <script src="https://kit.fontawesome.com/76e73fc237.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
 </body>
 
 

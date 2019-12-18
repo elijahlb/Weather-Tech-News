@@ -1,6 +1,4 @@
-/* font-family: 'Share', cursive;
-font-family: 'Overpass Mono', monospace;
-font-family: 'Montserrat Subrayada', sans-serif; */
+/*font-family: 'Overpass Mono', monospace;*/
 
 .jumbotron {
     color:white;
@@ -11,10 +9,6 @@ font-family: 'Montserrat Subrayada', sans-serif; */
     font-family: 'Montserrat Subrayada', sans-serif;
 }
 
-.link {
-    color:black;
-
-}
 
 h5 {
     font-family: 'Share', cursive;
@@ -34,11 +28,6 @@ div p {
     border-bottom:2px solid black;
 }
 
-.news-articles {
-    float:right;
-    
-}
-
 .city-div {
     text-align:center;
     padding:5px;
@@ -49,11 +38,14 @@ div p {
     float:right;
 }
 
-a:link {
+a:hover {
     color:black;
+    font-size:120%;
+    text-decoration-style: none;
+
 }
 
-a:hover {
+a:link {
     color:black;
 }
 
@@ -62,9 +54,21 @@ a:visited {
 }
 
 
+.other-header {
+    font-weight:bold;
+    font-size:150%;
+}
+
 .card-header {
     font-weight:bold;
+    
+    
 }
+
+.tech-news {
+    margin-left:20px;
+}
+
 
 #calendar {
     font-size:300%;
@@ -87,6 +91,10 @@ a:visited {
     font-weight:bold;
     font-size:100%;
 }
+
+#sticky-footer {
+    flex-shrink: none;
+  }
 
 
 
@@ -115,3 +123,32 @@ a:visited {
     border-radius:10px;
 }
 /*   UV INDEX   */
+
+
+@media only screen and (max-width: 1193px) {
+    .current-weather {
+      margin-left:80px;
+    }
+    
+  }
+
+  @media only screen and (max-width: 767px) {
+    .current-weather {
+      margin-left:180px;
+    }
+    .five-day {
+        margin-left:60px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .current-weather {
+      margin-left:100px;
+    }
+    .tech-news {
+        margin-left:0px;
+    }
+    .five-day {
+        margin-left:35px;
+    }
+  }
