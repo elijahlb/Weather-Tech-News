@@ -1,18 +1,42 @@
+/* font-family: 'Share', cursive;
+font-family: 'Overpass Mono', monospace;
+font-family: 'Montserrat Subrayada', sans-serif; */
+
 .jumbotron {
     color:white;
-    height:50px;
-    font-size:75%;
+    background-image:url(../Weather-Dashboard/weatherapp.jpeg);
+    height:100%;
+    font-size:100%;
+    width:100%;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.link {
+    color:black;
+
+}
+
+h5 {
+    font-family: 'Share', cursive;
+}
+
+hr {
+    width:200px;
 }
 
 
-
-.weather-display {
-    border-left: solid 2px black;
+.card {
+    font-family: 'Share', cursive;
 }
 
-.weather-display2 {
-    border-right: solid 2px black;
-    background-color:rgb(114, 114, 189)
+div p {
+    text-align:center;
+    border-bottom:2px solid black;
+}
+
+.news-articles {
+    float:right;
+    
 }
 
 .city-div {
@@ -22,17 +46,41 @@
 
 .five-day {
     margin-top:50px;
+    float:right;
+}
+
+a:link {
+    color:black;
+}
+
+a:hover {
+    color:black;
+}
+
+a:visited {
+    color:black;
+}
+
+
+.card-header {
+    font-weight:bold;
+}
+
+#calendar {
+    font-size:300%;
+    margin-top:30px;
 }
 
 
 .past-city-search {
     width:auto;
     font-weight:bold;
-
     border-style:none;
-   
-
     text-align:center;
+    padding:5px;
+    color:black;
+    font-family: 'Share', cursive;
+    width:100%
 }
 
 #current-city {
@@ -44,21 +92,26 @@
 
 /*   UV INDEX   */
 .low-level {
-    background-color:green;
+    border:green solid 5px;
+    border-radius:10px;
 }
 .moderate-level{
-    background-color:yellow;
+    border:yellow solid 5px;
+    border-radius:10px;
 }
 
 .high-level{
-    background-color:orange;
+    border:orange solid 5px;
+    border-radius:10px;
 }
 
 .very-high-level{
-    background-color:red;
+    border:red solid 5px;
+    border-radius:10px;
 }
 
 .extreme {
-    background-color:violet;
+    border:violet solid 5px;
+    border-radius:10px;
 }
 /*   UV INDEX   */
