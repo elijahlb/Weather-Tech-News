@@ -5,7 +5,7 @@
 #### By Elijah Broaddus
 
 
-![ScreenShot](../weather-dashboard/assets/QuickView.png) 
+![image](https://user-images.githubusercontent.com/50716060/71136929-6933b080-21d4-11ea-8001-e790fc628c9a.png)
 
 
 ​
