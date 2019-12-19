@@ -25,142 +25,6 @@ $(document).ready(function() {
     $(".news-articles3").attr("href", anchorTag3)
   })
   
-
-  var valueKeys = JSON.parse(localStorage.getItem("value1"));
-  var lastValue = valueKeys[valueKeys.length - 1]
-  var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
-  var queryURL5 = "https://api.openweathermap.org/data/2.5/weather?q=" + lastValue + "&appid=" + APIKey
-  
-
-  // -----------------------DISPLAY ONLOAD ---------
-  $.ajax({
-      url: queryURL5,
-      method: "GET"
-    }).then(function(response5) {
-      var imgURL5 = response5.weather[0].icon
-      var weatherIcon5 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL5 + ".png")
-      var kelvin = response5.main.temp;
-      var fahrenheit = (Math.floor((kelvin * 9/5) - 459.67));
-              $("#current-city").empty();
-              $("#current-city").append(response5.name + ": " + (moment().format('L')));
-              $("#city-temp").empty();
-              $("#city-temp").append("Temperature: " + fahrenheit + " F°")
-              $("#city-humidity").empty();
-              $("#city-humidity").append("Humidity: " + response5.main.humidity + " %")
-              $("#city-wind").empty();
-              $("#city-wind").append("Wind-Speed: " + response5.wind.speed + " MPH")
-              $("#weather-icon").empty();
-              $("#weather-icon").append(weatherIcon5);
-
-    var cityName = lastValue;
-      var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
-      var queryURL6 = "http://api.openweathermap.org/data/2.5/forecast?appid=" + APIKey + "&q=" + cityName;
-
-    $.ajax({
-      url: queryURL6,
-      method: "GET"
-    }).then(function(response6) {
-    
-    var imgURL2 = response6.list[5].weather[0].icon
-        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
-        var wholeTime = response6.list[5].dt_txt;
-        for (var i=0; i<wholeTime.length; i++) {
-          var futureTime1 = wholeTime.slice(0, 10);
-        }
-        var kelvin1 = response6.list[5].main.temp;
-        var fahrenheit1 = (Math.floor((kelvin1 * 9/5) - 459.67));
-                $("#current-city1").empty();
-                $("#current-city1").append(response6.city.name + ": " + futureTime1);
-                $("#city-temp1").empty();
-                $("#city-temp1").append("Temperature: " + fahrenheit1 + " F°")
-                $("#city-humidity1").empty();
-                $("#city-humidity1").append("Humidity: " + response6.list[5].main.humidity + " %")
-                $("#city-wind1").empty();
-                $("#city-wind1").append("Wind-Speed: " + response6.list[5].wind.speed + " MPH")
-                $("#weather-icon1").empty();
-                $("#weather-icon1").append(weatherIcon2);
-
-
-        var imgURL2 = response6.list[13].weather[0].icon
-        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
-        var wholeTime = response6.list[13].dt_txt;
-        for (var i=0; i<wholeTime.length; i++) {
-          var futureTime2 = wholeTime.slice(0, 10);
-        }
-        var kelvin2 = response6.list[13].main.temp;
-        var fahrenheit2 = (Math.floor((kelvin2 * 9/5) - 459.67));
-                $("#current-city2").empty();
-                $("#current-city2").append(response6.city.name + ": " + futureTime2);
-                $("#city-temp2").empty();
-                $("#city-temp2").append("Temperature: " + fahrenheit2 + " F°")
-                $("#city-humidity2").empty();
-                $("#city-humidity2").append("Humidity: " + response6.list[13].main.humidity + " %")
-                $("#city-wind2").empty();
-                $("#city-wind2").append("Wind-Speed: " + response6.list[13].wind.speed + " MPH")
-                $("#weather-icon2").empty();
-                $("#weather-icon2").append(weatherIcon2);
-
-
-        var imgURL2 = response6.list[21].weather[0].icon
-        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
-        var wholeTime = response6.list[21].dt_txt;
-        for (var i=0; i<wholeTime.length; i++) {
-          var futureTime3 = wholeTime.slice(0, 10);
-        }
-        var kelvin3 = response6.list[21].main.temp;
-        var fahrenheit3 = (Math.floor((kelvin3 * 9/5) - 459.67));
-                $("#current-city3").empty();
-                $("#current-city3").append(response6.city.name + ": " + futureTime3);
-                $("#city-temp3").empty();
-                $("#city-temp3").append("Temperature: " + fahrenheit3 + " F°")
-                $("#city-humidity3").empty();
-                $("#city-humidity3").append("Humidity: " + response6.list[21].main.humidity + " %")
-                $("#city-wind3").empty();
-                $("#city-wind3").append("Wind-Speed: " + response6.list[21].wind.speed + " MPH")
-                $("#weather-icon3").empty();
-                $("#weather-icon3").append(weatherIcon2);
-
-        var imgURL2 = response6.list[29].weather[0].icon
-        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
-        var wholeTime = response6.list[29].dt_txt;
-        for (var i=0; i<wholeTime.length; i++) {
-          var futureTime4 = wholeTime.slice(0, 10);
-        }
-        var kelvin4 = response6.list[29].main.temp;
-        var fahrenheit4 = (Math.floor((kelvin4 * 9/5) - 459.67));
-                $("#current-city4").empty();
-                $("#current-city4").append(response6.city.name + ": " + futureTime4);
-                $("#city-temp4").empty();
-                $("#city-temp4").append("Temperature: " + fahrenheit4 + " F°")
-                $("#city-humidity4").empty();
-                $("#city-humidity4").append("Humidity: " + response6.list[29].main.humidity + " %")
-                $("#city-wind4").empty();
-                $("#city-wind4").append("Wind-Speed: " + response6.list[29].wind.speed + " MPH")
-                $("#weather-icon4").empty();
-                $("#weather-icon4").append(weatherIcon2);
-
-        var imgURL2 = response6.list[37].weather[0].icon
-        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
-        var wholeTime = response6.list[37].dt_txt;
-        for (var i=0; i<wholeTime.length; i++) {
-          var futureTime5 = wholeTime.slice(0, 10);
-        }
-        var kelvin5 = response6.list[37].main.temp;
-        var fahrenheit5 = (Math.floor((kelvin5 * 9/5) - 459.67));
-                $("#current-city5").empty();
-                $("#current-city5").append(response6.city.name + ": " + futureTime5);
-                $("#city-temp5").empty();
-                $("#city-temp5").append("Temperature: " + fahrenheit5 + " F°")
-                $("#city-humidity5").empty();
-                $("#city-humidity5").append("Humidity: " + response6.list[37].main.humidity + " %")
-                $("#city-wind5").empty();
-                $("#city-wind5").append("Wind-Speed: " + response6.list[37].wind.speed + " MPH")
-                $("#weather-icon5").empty();
-                $("#weather-icon5").append(weatherIcon2);
-    });
-      
-    });
-  //-----------------END DISPLAY ONLOAD -----------------
     
 
 // ----------SETS SEARCH VALUE TO LOCAL STORAGE ARRAY --------
@@ -182,20 +46,6 @@ $('.search-city').on('click', function(e){
 });
 // -----------------------------------------------------
 
-
-
-// ---------SETTING PAST SEARCH BUTTON VALUES
-
-    var valueKeys = JSON.parse(localStorage.getItem("value1"));
-    var lastValue = valueKeys[valueKeys.length - 1]
-    for (var i=0;i<valueKeys.length;i++) {    
-    }
-
-          $("#past-city4").append(valueKeys[4]);
-          $("#past-city3").append(valueKeys[3]);
-          $("#past-city2").append(valueKeys[2]);
-          $("#past-city1").append(valueKeys[1]);
-          $("#past-city0").append(valueKeys[0]);
 
 // --------ONCLICK AJAX CALLS ----------
 $('.search-city').on('click', function(e){  
@@ -378,6 +228,159 @@ $.ajax({
 
 
 });
+// ---------SETTING PAST SEARCH BUTTON VALUES
+
+var valueKeys = JSON.parse(localStorage.getItem("value1"));
+var lastValue = valueKeys[valueKeys.length - 1]
+for (var i=0;i<valueKeys.length;i++) {    
+}
+
+      $("#past-city4").append(valueKeys[4]);
+      $("#past-city3").append(valueKeys[3]);
+      $("#past-city2").append(valueKeys[2]);
+      $("#past-city1").append(valueKeys[1]);
+      $("#past-city0").append(valueKeys[0]);
+
+
+var valueKeys = JSON.parse(localStorage.getItem("value1"));
+  var lastValue = valueKeys[valueKeys.length - 1]
+  var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
+  var queryURL5 = "https://api.openweathermap.org/data/2.5/weather?q=" + lastValue + "&appid=" + APIKey
+  
+
+  // -----------------------DISPLAY ONLOAD ---------
+  $.ajax({
+      url: queryURL5,
+      method: "GET"
+    }).then(function(response5) {
+      var valueKeys = JSON.parse(localStorage.getItem("value1"));
+  var lastValue = valueKeys[valueKeys.length - 1]
+  var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
+  var queryURL5 = "https://api.openweathermap.org/data/2.5/weather?q=" + lastValue + "&appid=" + APIKey
+      var imgURL5 = response5.weather[0].icon
+      var weatherIcon5 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL5 + ".png")
+      var kelvin = response5.main.temp;
+      var fahrenheit = (Math.floor((kelvin * 9/5) - 459.67));
+              $("#current-city").empty();
+              $("#current-city").append(response5.name + ": " + (moment().format('L')));
+              $("#city-temp").empty();
+              $("#city-temp").append("Temperature: " + fahrenheit + " F°")
+              $("#city-humidity").empty();
+              $("#city-humidity").append("Humidity: " + response5.main.humidity + " %")
+              $("#city-wind").empty();
+              $("#city-wind").append("Wind-Speed: " + response5.wind.speed + " MPH")
+              $("#weather-icon").empty();
+              $("#weather-icon").append(weatherIcon5);
+
+    var cityName = lastValue;
+      var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
+      var queryURL6 = "http://api.openweathermap.org/data/2.5/forecast?appid=" + APIKey + "&q=" + cityName;
+
+    $.ajax({
+      url: queryURL6,
+      method: "GET"
+    }).then(function(response6) {
+    
+    var imgURL2 = response6.list[5].weather[0].icon
+        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
+        var wholeTime = response6.list[5].dt_txt;
+        for (var i=0; i<wholeTime.length; i++) {
+          var futureTime1 = wholeTime.slice(0, 10);
+        }
+        var kelvin1 = response6.list[5].main.temp;
+        var fahrenheit1 = (Math.floor((kelvin1 * 9/5) - 459.67));
+                $("#current-city1").empty();
+                $("#current-city1").append(response6.city.name + ": " + futureTime1);
+                $("#city-temp1").empty();
+                $("#city-temp1").append("Temperature: " + fahrenheit1 + " F°")
+                $("#city-humidity1").empty();
+                $("#city-humidity1").append("Humidity: " + response6.list[5].main.humidity + " %")
+                $("#city-wind1").empty();
+                $("#city-wind1").append("Wind-Speed: " + response6.list[5].wind.speed + " MPH")
+                $("#weather-icon1").empty();
+                $("#weather-icon1").append(weatherIcon2);
+
+
+        var imgURL2 = response6.list[13].weather[0].icon
+        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
+        var wholeTime = response6.list[13].dt_txt;
+        for (var i=0; i<wholeTime.length; i++) {
+          var futureTime2 = wholeTime.slice(0, 10);
+        }
+        var kelvin2 = response6.list[13].main.temp;
+        var fahrenheit2 = (Math.floor((kelvin2 * 9/5) - 459.67));
+                $("#current-city2").empty();
+                $("#current-city2").append(response6.city.name + ": " + futureTime2);
+                $("#city-temp2").empty();
+                $("#city-temp2").append("Temperature: " + fahrenheit2 + " F°")
+                $("#city-humidity2").empty();
+                $("#city-humidity2").append("Humidity: " + response6.list[13].main.humidity + " %")
+                $("#city-wind2").empty();
+                $("#city-wind2").append("Wind-Speed: " + response6.list[13].wind.speed + " MPH")
+                $("#weather-icon2").empty();
+                $("#weather-icon2").append(weatherIcon2);
+
+
+        var imgURL2 = response6.list[21].weather[0].icon
+        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
+        var wholeTime = response6.list[21].dt_txt;
+        for (var i=0; i<wholeTime.length; i++) {
+          var futureTime3 = wholeTime.slice(0, 10);
+        }
+        var kelvin3 = response6.list[21].main.temp;
+        var fahrenheit3 = (Math.floor((kelvin3 * 9/5) - 459.67));
+                $("#current-city3").empty();
+                $("#current-city3").append(response6.city.name + ": " + futureTime3);
+                $("#city-temp3").empty();
+                $("#city-temp3").append("Temperature: " + fahrenheit3 + " F°")
+                $("#city-humidity3").empty();
+                $("#city-humidity3").append("Humidity: " + response6.list[21].main.humidity + " %")
+                $("#city-wind3").empty();
+                $("#city-wind3").append("Wind-Speed: " + response6.list[21].wind.speed + " MPH")
+                $("#weather-icon3").empty();
+                $("#weather-icon3").append(weatherIcon2);
+
+        var imgURL2 = response6.list[29].weather[0].icon
+        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
+        var wholeTime = response6.list[29].dt_txt;
+        for (var i=0; i<wholeTime.length; i++) {
+          var futureTime4 = wholeTime.slice(0, 10);
+        }
+        var kelvin4 = response6.list[29].main.temp;
+        var fahrenheit4 = (Math.floor((kelvin4 * 9/5) - 459.67));
+                $("#current-city4").empty();
+                $("#current-city4").append(response6.city.name + ": " + futureTime4);
+                $("#city-temp4").empty();
+                $("#city-temp4").append("Temperature: " + fahrenheit4 + " F°")
+                $("#city-humidity4").empty();
+                $("#city-humidity4").append("Humidity: " + response6.list[29].main.humidity + " %")
+                $("#city-wind4").empty();
+                $("#city-wind4").append("Wind-Speed: " + response6.list[29].wind.speed + " MPH")
+                $("#weather-icon4").empty();
+                $("#weather-icon4").append(weatherIcon2);
+
+        var imgURL2 = response6.list[37].weather[0].icon
+        var weatherIcon2 = $("<img>").attr("src", "http://openweathermap.org/img/w/" + imgURL2 + ".png")
+        var wholeTime = response6.list[37].dt_txt;
+        for (var i=0; i<wholeTime.length; i++) {
+          var futureTime5 = wholeTime.slice(0, 10);
+        }
+        var kelvin5 = response6.list[37].main.temp;
+        var fahrenheit5 = (Math.floor((kelvin5 * 9/5) - 459.67));
+                $("#current-city5").empty();
+                $("#current-city5").append(response6.city.name + ": " + futureTime5);
+                $("#city-temp5").empty();
+                $("#city-temp5").append("Temperature: " + fahrenheit5 + " F°")
+                $("#city-humidity5").empty();
+                $("#city-humidity5").append("Humidity: " + response6.list[37].main.humidity + " %")
+                $("#city-wind5").empty();
+                $("#city-wind5").append("Wind-Speed: " + response6.list[37].wind.speed + " MPH")
+                $("#weather-icon5").empty();
+                $("#weather-icon5").append(weatherIcon2);
+    });
+      
+    });
+  //-----------------END DISPLAY ONLOAD -----------------
 
 
 

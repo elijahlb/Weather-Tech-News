@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather & Tech News</title>
-    <link rel="stylesheet" type= "text/css" href="../Weather-Dashboard/style.css">
+    <link rel="stylesheet" type= "text/css" href="assets/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Overpass+Mono|Share&display=swap" rel="stylesheet">
 </head>
@@ -14,7 +14,7 @@
     <div style="background-color:rgb(53, 53, 53);" class="jumbotron">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center" style="font-size:250%;">Weather Dashboard</h1> 
+                <h1 class="text-center" style="font-size:250%;">Weather & Tech News </h1> 
             </div>
         </div>
     </div>
@@ -43,16 +43,7 @@
                
                 <!-------->
             </div>
-            
-            <div class="card current-weather" >
-                <div class="card-header text-center other-header">Current Weather</div>
-                    <div id="weather-icon" class="city-div"></div>
-                    <div id="current-city" class="city-div"></div>
-                    <div id="city-temp" class="city-div"></div>
-                    <div id="city-humidity" class="city-div"></div>
-                    <div id="city-wind" class="city-div"></div>
-                    <div id="city-uv" class="city-div"></div>
-                </div> 
+        
 
                 <div class="card tech-news">
                         <div class="card-header other-header text-center">
@@ -70,7 +61,16 @@
         </div>
         <div class="five-day">
         <div class="row">
-            <div class="card-header text-center">5 Day Forecast <br> 
+                <div class="card current-weather" >
+                        <div class="card-header text-center other-header">Current Weather</div>
+                            <div id="weather-icon" class="city-div"></div>
+                            <div id="current-city" class="city-div"></div>
+                            <div id="city-temp" class="city-div"></div>
+                            <div id="city-humidity" class="city-div"></div>
+                            <div id="city-wind" class="city-div"></div>
+                            <div id="city-uv" class="city-div"></div>
+                        </div> 
+            <div class="card-header text-center five-font">5 Day Forecast <br> 
                 <i class="far fa-calendar-alt" id="calendar"></i></div>
         <div class="card" >
             <div id="weather-icon1" class="city-div"></div>

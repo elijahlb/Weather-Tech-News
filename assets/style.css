@@ -2,13 +2,12 @@
 
 .jumbotron {
     color:white;
-    background-image:url(../Weather-Dashboard/weatherapp.jpeg);
+    background-image:url(../assets/weatherapp.jpeg);
     height:100%;
     font-size:100%;
     width:100%;
     font-family: 'Montserrat Subrayada', sans-serif;
 }
-
 
 h5 {
     font-family: 'Share', cursive;
@@ -67,6 +66,8 @@ a:visited {
 
 .tech-news {
     margin-left:20px;
+    float:right;
+    width:50%;
 }
 
 
@@ -134,19 +135,41 @@ a:visited {
 
   @media only screen and (max-width: 767px) {
     .current-weather {
-      margin-left:180px;
+      margin-left:110px;
+      margin-right:30px;
     }
+    
     .five-day {
-        margin-left:60px;
+        margin-left:70px;
     }
   }
+  .tech-news {
+    margin-left:150px;
+}
+
+@media only screen and (max-width: 524px) {
+    .current-weather {
+      margin-left:70px;
+      margin-right:30px;
+    }
+    
+    .five-day {
+        margin-left:100px;
+    }
+  }
+  .tech-news {
+    margin-left:130px;
+}
 
   @media only screen and (max-width: 400px) {
     .current-weather {
-      margin-left:100px;
+      margin-left:49px;
     }
     .tech-news {
-        margin-left:0px;
+        margin-left:85px;
+    }
+    hr {
+        width:100px;
     }
     .five-day {
         margin-left:35px;
