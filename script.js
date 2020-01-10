@@ -231,7 +231,10 @@ $.ajax({
 // ---------SETTING PAST SEARCH BUTTON VALUES
 
 var valueKeys = JSON.parse(localStorage.getItem("value1"));
+
+if (valueKeys) {
 var lastValue = valueKeys[valueKeys.length - 1]
+
 for (var i=0;i<valueKeys.length;i++) {    
 }
 
@@ -247,7 +250,7 @@ var valueKeys = JSON.parse(localStorage.getItem("value1"));
   var APIKey = "ebdc73f0f98e2655e84d811acead2d14";
   var queryURL5 = "https://api.openweathermap.org/data/2.5/weather?q=" + lastValue + "&appid=" + APIKey
   
-
+}
   // -----------------------DISPLAY ONLOAD ---------
   $.ajax({
       url: queryURL5,
